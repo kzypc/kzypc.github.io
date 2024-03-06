@@ -384,6 +384,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  appearance: button; /* Standard syntax */
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -441,7 +442,8 @@ legend + * {
 
 [type=search] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  display: inline-block; /* or another appropriate value */
+  /* Add additional styling as needed */
 }
 
 /* rtl:raw:
@@ -461,9 +463,11 @@ legend + * {
 }
 
 ::file-selector-button {
+  display: inline-block;
   font: inherit;
-  -webkit-appearance: button;
+  /* Add additional styling as needed */
 }
+
 
 output {
   display: inline-block;
@@ -11560,9 +11564,10 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  background-clip: text; /* Standard syntax */
+  -webkit-background-clip: text; /* WebKit vendor-prefixed syntax */
+  color: transparent;
 }
 
 .rounded-4 {
